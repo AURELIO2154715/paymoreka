@@ -37,10 +37,10 @@ public class AdminDashBoard extends javax.swing.JFrame {
         jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
         payType = new javax.swing.ButtonGroup();
         gender = new javax.swing.ButtonGroup();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        addEmployeeTab = new javax.swing.JTabbedPane();
         Employee = new javax.swing.JPanel();
         searchBar = new javax.swing.JTextField();
-        searcButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
         employeeTable = new javax.swing.JScrollPane();
         jTable_Click = new javax.swing.JTable();
         addEmployee = new javax.swing.JPanel();
@@ -50,9 +50,9 @@ public class AdminDashBoard extends javax.swing.JFrame {
         firstName = new javax.swing.JTextField();
         lastName = new javax.swing.JTextField();
         birthday = new javax.swing.JLabel();
-        birthMonth = new javax.swing.JComboBox<String>();
-        birthD = new javax.swing.JComboBox<String>();
-        birthYear = new javax.swing.JComboBox<String>();
+        birthMonth = new javax.swing.JComboBox<>();
+        birthD = new javax.swing.JComboBox<>();
+        birthYear = new javax.swing.JComboBox<>();
         genderLabel = new javax.swing.JLabel();
         male = new javax.swing.JRadioButton();
         female = new javax.swing.JRadioButton();
@@ -67,9 +67,9 @@ public class AdminDashBoard extends javax.swing.JFrame {
         jobTitleLabel = new javax.swing.JLabel();
         dateHiredLabel = new javax.swing.JLabel();
         jobTitle = new javax.swing.JTextField();
-        hiredMonth = new javax.swing.JComboBox<String>();
-        hiredDay = new javax.swing.JComboBox<String>();
-        hiredYear = new javax.swing.JComboBox<String>();
+        hiredMonth = new javax.swing.JComboBox<>();
+        hiredDay = new javax.swing.JComboBox<>();
+        hiredYear = new javax.swing.JComboBox<>();
         hourlRate = new javax.swing.JRadioButton();
         biMonthlyRate = new javax.swing.JRadioButton();
         payTypeLabel = new javax.swing.JLabel();
@@ -86,7 +86,7 @@ public class AdminDashBoard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        searcButton.setText("Search");
+        searchButton.setText("Search");
 
         jTable_Click.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jTable_Click.setModel(new javax.swing.table.DefaultTableModel(
@@ -138,7 +138,7 @@ public class AdminDashBoard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(searcButton)
+                .addComponent(searchButton)
                 .addGap(220, 220, 220))
             .addGroup(EmployeeLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
@@ -151,13 +151,13 @@ public class AdminDashBoard extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(EmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searcButton))
+                    .addComponent(searchButton))
                 .addGap(18, 18, 18)
                 .addComponent(employeeTable, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Employee", Employee);
+        addEmployeeTab.addTab("Employee", Employee);
 
         personalDetails.setBorder(javax.swing.BorderFactory.createTitledBorder("Personal Details"));
 
@@ -167,16 +167,16 @@ public class AdminDashBoard extends javax.swing.JFrame {
 
         birthday.setText("Birthday");
 
-        birthMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        birthMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         birthMonth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 birthMonthActionPerformed(evt);
             }
         });
 
-        birthD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        birthD.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        birthYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2017", "2016", "2013" }));
+        birthYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017", "2016", "2013" }));
 
         genderLabel.setText("Gender");
 
@@ -283,16 +283,16 @@ public class AdminDashBoard extends javax.swing.JFrame {
             }
         });
 
-        hiredMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        hiredMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         hiredMonth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hiredMonthActionPerformed(evt);
             }
         });
 
-        hiredDay.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        hiredDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        hiredYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2017" }));
+        hiredYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017" }));
 
         payType.add(hourlRate);
         hourlRate.setText("Hourly");
@@ -389,7 +389,7 @@ public class AdminDashBoard extends javax.swing.JFrame {
                 .addGap(127, 127, 127))
         );
 
-        jTabbedPane1.addTab("Add Employee", addEmployee);
+        addEmployeeTab.addTab("Add Employee", addEmployee);
 
         banner.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         banner.setText("Pay MoreKa");
@@ -411,7 +411,7 @@ public class AdminDashBoard extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(logout))
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addEmployeeTab, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(339, 339, 339)
                         .addComponent(banner)))
@@ -425,7 +425,7 @@ public class AdminDashBoard extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addComponent(banner)
                 .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addEmployeeTab, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -517,6 +517,7 @@ public class AdminDashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Employee;
     private javax.swing.JPanel addEmployee;
+    private javax.swing.JTabbedPane addEmployeeTab;
     private javax.swing.JTextField address;
     private javax.swing.JLabel addressLabel;
     private javax.swing.JLabel banner;
@@ -543,7 +544,6 @@ public class AdminDashBoard extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable_Click;
     private javax.swing.JTextField jobTitle;
     private javax.swing.JLabel jobTitleLabel;
@@ -557,8 +557,8 @@ public class AdminDashBoard extends javax.swing.JFrame {
     private javax.swing.JLabel payTypeLabel;
     private javax.swing.JPanel personalDetails;
     private javax.swing.JButton register;
-    private javax.swing.JButton searcButton;
     private javax.swing.JTextField searchBar;
+    private javax.swing.JButton searchButton;
     // End of variables declaration//GEN-END:variables
 
     void setVisisble(boolean b) {
