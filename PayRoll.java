@@ -9,7 +9,7 @@
 import java.rmi.*;
 
    /**
-    * This is an interface contains the methods that adds employees, generates report, tracks
+    * This is an interface that contains the methods that adds employees, generates report, tracks
     * employees’ attendance, tax, income etc. in the system 
     *
     */
@@ -87,6 +87,25 @@ public interface PayRoll extends Remote {
 	 * @return bonus
 	 */
 	public double bonus(String name, double salary);
+	
+	/**
+	 *
+	 * this method generates pay checks of the employee
+	 * 
+	 * @param employee Employee's name
+	 * @return paycheckString
+	 * @throws EmployeeNotFoundException if the employee does not exist
+	 */
+	 public String payCheck(String name);
+	 
+	 
+	 /**
+	  *
+	  * this method views the records of employees
+	  *
+	  * User defined class Employees
+	  */
+	  public void viewRecord();
     
 
 
