@@ -1,0 +1,37 @@
+oooooooooooh
+edi dun sa code mo na may nagregister
+yung may insert to users or idk
+magiinsert ka sa notifications table niyo
+
+
+yung sa notification table mo mga columns
+
+id - auto increment dapat
+receiver - nung notif
+data - kung anong message nung notif
+read_at - kailan niya nabasa
+mga timestamps
+
+created_at - kailan nagawa notif
+yung receiver, foreign key dapat siya ng id ng users niyo
+ok
+tapoz?\
+queryt query nalang tapos pa add ng pa add?
+may icon ba na 1+ dun sa notif?
+
+pwede ??
+naisip kong logic dun is
+kung null yung read_at then yung nakalogin is equal sa receiver_id
+edi yown
+receiver_id nalang pala since magiging foreign key sya
+ika count mo yung mga null na read_at then receiver_id = user(nakalogin) id
+depende sa inyo. pwedeng kapag clinick niya yung icon ng notif
+yung dun kasi sa sinasabi mo
+yung admin kapag may bagong nagregister
+may url ba na unique
+yung mga list niyo ng mga users na nagregister?
+kasi kung oo, pwdeng dun maredirect yung admin. kapag clinick niya yung notif, maga update db ng system date sa read_at
+or okay lang naman kung hindi date
+kahit boolean, or enum na 0 1
+0 di pa nababasa
+1 nabasa na

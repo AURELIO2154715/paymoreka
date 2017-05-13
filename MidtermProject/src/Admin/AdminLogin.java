@@ -10,7 +10,17 @@ package Admin;
  *
  * @author Admin
  */
+import java.util.*;
+import java.rmi.server.*;
+import java.rmi.*;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.sql.*;
+import javax.swing.*;
 public class AdminLogin extends javax.swing.JFrame {
+//    public String login(String username, String Password) throws RemoteException {
+//        return 
+//	}
 
     /**
      * Creates new form AdminLogin
@@ -122,9 +132,22 @@ public class AdminLogin extends javax.swing.JFrame {
 
     private void logInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInActionPerformed
         // TODO add your handling code here:
-        dispose();
-        AdminDashBoard dashBoard = new AdminDashBoard();
-        dashBoard.setVisible(true);
+        try{
+            Registry reg = LocateRegistry.getRegistry("localhost", 1099);
+            PayrollServer msgs = (PayrollServer) reg.lookup("pyserver");
+            if(msgs.login(userName.getText(), password.getText()) == true){
+                dispose();
+                AdminDashBoard dashBoard = new AdminDashBoard();
+                dashBoard.setVisible(true);
+            } else{
+                
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        
+        
     }//GEN-LAST:event_logInActionPerformed
 
     /**

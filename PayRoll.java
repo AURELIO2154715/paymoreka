@@ -27,9 +27,10 @@ public interface PayRoll extends Remote {
   public void addEmployees(String name, String position);
   /**
    *  this method deletes an employee and the position of the employee in the system 
+   * @param name
    * @throws UserNotFoundException
    */
-  public void removeEmployees();
+  public String removeEmployees(name);
 
   /**
    * this method lets the user to input time-in to the system

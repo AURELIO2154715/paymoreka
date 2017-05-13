@@ -1,0 +1,16 @@
+firstName
+middleName
+lastName
+male
+female
+birthMonth
+birthD
+birthYear
+address
+eMail
+jobTitle
+hiredMonth
+hiredDay
+hiredYear
+hourlRate
+biMonthlyRate

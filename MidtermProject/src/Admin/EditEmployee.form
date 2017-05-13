@@ -56,7 +56,7 @@
                           <Component id="doneButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="76" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -88,39 +88,40 @@
                               <Component id="addressLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="genderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="monthBox" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dayBox" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="yearBox" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="monthBox" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="dayBox" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="yearBox" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="firstName" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                                      <Component id="middleName" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                                      <Component id="lastName" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="maleRadio" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="femaleRadio" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <Component id="address" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
-                              <Component id="firstName" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="middleName" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
-                              <Component id="lastName" alignment="0" min="-2" pref="182" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="maleRadio" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="femaleRadio" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="address" min="-2" pref="230" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="contactLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="emailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="contact" max="32767" attributes="0"/>
-                              <Component id="email" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="emailLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="email" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -160,15 +161,10 @@
                       <Component id="addressLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="address" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="contactLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="contact" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="emailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -187,30 +183,34 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="firstName">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTextField()"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="firstName.setText(&quot;hoy&quot;);"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="lastName">
         </Component>
         <Component class="javax.swing.JLabel" name="birthdayLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Birthday"/>
+            <Property name="text" type="java.lang.String" value="Birthday m/d/y"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="monthBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="12">
-                <StringItem index="0" value="January"/>
-                <StringItem index="1" value="February"/>
-                <StringItem index="2" value="March"/>
-                <StringItem index="3" value="April"/>
-                <StringItem index="4" value="May"/>
-                <StringItem index="5" value="June"/>
-                <StringItem index="6" value="July"/>
-                <StringItem index="7" value="August"/>
-                <StringItem index="8" value="September"/>
-                <StringItem index="9" value="October"/>
-                <StringItem index="10" value="November"/>
-                <StringItem index="11" value="December"/>
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
+                <StringItem index="3" value="4"/>
+                <StringItem index="4" value="5"/>
+                <StringItem index="5" value="6"/>
+                <StringItem index="6" value="7"/>
+                <StringItem index="7" value="8"/>
+                <StringItem index="8" value="9"/>
+                <StringItem index="9" value="10"/>
+                <StringItem index="10" value="11"/>
+                <StringItem index="11" value="12"/>
               </StringArray>
             </Property>
           </Properties>
@@ -309,17 +309,10 @@
         </Component>
         <Component class="javax.swing.JTextField" name="address">
         </Component>
-        <Component class="javax.swing.JLabel" name="contactLabel">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Contact number"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="emailLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="eMail"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="contact">
         </Component>
         <Component class="javax.swing.JTextField" name="email">
         </Component>
@@ -341,10 +334,9 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="payLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="hourlyRadio" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bimonthlyRadio" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -383,13 +375,12 @@
                       <Component id="hiredDay" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="hiredYear" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                  <EmptySpace pref="29" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bimonthlyRadio" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="hourlyRadio" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="payLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -490,25 +481,20 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="hourlyRadio">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Hourly"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hourlyRadioActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="bimonthlyRadio">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Bi-monthly"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bimonthlyRadioActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="payLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pay Type"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox1">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Hourly"/>
+                <StringItem index="1" value="BiMonthly"/>
+                <StringItem index="2" value="Monthly"/>
+              </StringArray>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

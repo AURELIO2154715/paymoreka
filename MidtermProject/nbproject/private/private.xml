@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/BiMonthly.java</file>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/Hourly.java</file>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/EditEmployee.java</file>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/ViewDetails.java</file>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/AdminDashBoard.java</file>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/AdminLogin.java</file>
-            <file>file:/C:/Users/Admin/Desktop/paymoreka/MidtermProject/src/ConfirmEmployee.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/ConfirmEmployee.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/Server.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/AdminDashBoard.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/ViewDetails.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/PayrollServer.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/EditEmployee.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/BiMonthly.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/PayrollServerImpl.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Admin/AdminLogin.java</file>
+            <file>file:/C:/Users/Galo/Desktop/REPOS/rmi%20callback%20sample/MidtermProject/src/Client/Home.java</file>
         </group>
     </open-files>
 </project-private>

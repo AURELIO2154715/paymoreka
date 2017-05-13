@@ -34,9 +34,9 @@ public class EditEmployee extends javax.swing.JFrame {
         firstName = new javax.swing.JTextField();
         lastName = new javax.swing.JTextField();
         birthdayLabel = new javax.swing.JLabel();
-        monthBox = new javax.swing.JComboBox<>();
-        dayBox = new javax.swing.JComboBox<>();
-        yearBox = new javax.swing.JComboBox<>();
+        monthBox = new javax.swing.JComboBox<String>();
+        dayBox = new javax.swing.JComboBox<String>();
+        yearBox = new javax.swing.JComboBox<String>();
         genderLabel = new javax.swing.JLabel();
         maleRadio = new javax.swing.JRadioButton();
         femaleRadio = new javax.swing.JRadioButton();
@@ -44,20 +44,17 @@ public class EditEmployee extends javax.swing.JFrame {
         middleName = new javax.swing.JTextField();
         addressLabel = new javax.swing.JLabel();
         address = new javax.swing.JTextField();
-        contactLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
-        contact = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jobLabel = new javax.swing.JLabel();
         hiredLabel = new javax.swing.JLabel();
         job = new javax.swing.JTextField();
-        hiredMonth = new javax.swing.JComboBox<>();
-        hiredDay = new javax.swing.JComboBox<>();
-        hiredYear = new javax.swing.JComboBox<>();
-        hourlyRadio = new javax.swing.JRadioButton();
-        bimonthlyRadio = new javax.swing.JRadioButton();
+        hiredMonth = new javax.swing.JComboBox<String>();
+        hiredDay = new javax.swing.JComboBox<String>();
+        hiredYear = new javax.swing.JComboBox<String>();
         payLabel = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
         doneButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
 
@@ -69,18 +66,20 @@ public class EditEmployee extends javax.swing.JFrame {
 
         lastNameLabel.setText("Last Name");
 
-        birthdayLabel.setText("Birthday");
+        firstName.setText("hoy");
 
-        monthBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        birthdayLabel.setText("Birthday m/d/y");
+
+        monthBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         monthBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 monthBoxActionPerformed(evt);
             }
         });
 
-        dayBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        dayBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        yearBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017", "2016", "2013" }));
+        yearBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2017", "2016", "2013" }));
 
         genderLabel.setText("Gender");
 
@@ -96,8 +95,6 @@ public class EditEmployee extends javax.swing.JFrame {
         middleNameLabel.setText("Middle Name");
 
         addressLabel.setText("Address");
-
-        contactLabel.setText("Contact number");
 
         emailLabel.setText("eMail");
 
@@ -115,31 +112,31 @@ public class EditEmployee extends javax.swing.JFrame {
                             .addComponent(birthdayLabel)
                             .addComponent(addressLabel)
                             .addComponent(genderLabel))
-                        .addGap(36, 36, 36)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(monthBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dayBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(yearBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(middleName, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(monthBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dayBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(yearBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(middleName, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(maleRadio)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(femaleRadio))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(maleRadio)
-                                .addGap(10, 10, 10)
-                                .addComponent(femaleRadio))))
+                                .addGap(24, 24, 24)
+                                .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(contactLabel)
-                            .addComponent(emailLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(contact)
-                            .addComponent(email))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                        .addComponent(emailLabel)
+                        .addGap(71, 71, 71)
+                        .addComponent(email)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,14 +168,10 @@ public class EditEmployee extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addressLabel)
                     .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(contactLabel)
-                    .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(emailLabel)
-                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailLabel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -194,32 +187,20 @@ public class EditEmployee extends javax.swing.JFrame {
             }
         });
 
-        hiredMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        hiredMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         hiredMonth.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hiredMonthActionPerformed(evt);
             }
         });
 
-        hiredDay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        hiredDay.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
 
-        hiredYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2017" }));
-
-        hourlyRadio.setText("Hourly");
-        hourlyRadio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hourlyRadioActionPerformed(evt);
-            }
-        });
-
-        bimonthlyRadio.setText("Bi-monthly");
-        bimonthlyRadio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bimonthlyRadioActionPerformed(evt);
-            }
-        });
+        hiredYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2017" }));
 
         payLabel.setText("Pay Type");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hourly", "BiMonthly", "Monthly" }));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -229,10 +210,9 @@ public class EditEmployee extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(payLabel)
-                        .addGap(25, 25, 25)
-                        .addComponent(hourlyRadio)
                         .addGap(18, 18, 18)
-                        .addComponent(bimonthlyRadio))
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jobLabel)
@@ -261,12 +241,11 @@ public class EditEmployee extends javax.swing.JFrame {
                     .addComponent(hiredMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hiredDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hiredYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bimonthlyRadio)
-                    .addComponent(hourlyRadio)
-                    .addComponent(payLabel))
-                .addGap(25, 25, 25))
+                    .addComponent(payLabel)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
         );
 
         doneButton.setText("Done");
@@ -314,7 +293,7 @@ public class EditEmployee extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(doneButton)
                             .addComponent(cancelButton))
-                        .addGap(0, 79, Short.MAX_VALUE)))
+                        .addGap(0, 76, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -336,14 +315,6 @@ public class EditEmployee extends javax.swing.JFrame {
     private void hiredMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hiredMonthActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_hiredMonthActionPerformed
-
-    private void hourlyRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hourlyRadioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hourlyRadioActionPerformed
-
-    private void bimonthlyRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bimonthlyRadioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bimonthlyRadioActionPerformed
 
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
           dispose();
@@ -392,11 +363,8 @@ public class EditEmployee extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField address;
     private javax.swing.JLabel addressLabel;
-    private javax.swing.JRadioButton bimonthlyRadio;
     private javax.swing.JLabel birthdayLabel;
     private javax.swing.JButton cancelButton;
-    private javax.swing.JTextField contact;
-    private javax.swing.JLabel contactLabel;
     private javax.swing.JComboBox<String> dayBox;
     private javax.swing.JButton doneButton;
     private javax.swing.JTextField email;
@@ -409,7 +377,7 @@ public class EditEmployee extends javax.swing.JFrame {
     private javax.swing.JLabel hiredLabel;
     private javax.swing.JComboBox<String> hiredMonth;
     private javax.swing.JComboBox<String> hiredYear;
-    private javax.swing.JRadioButton hourlyRadio;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField job;

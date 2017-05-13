@@ -318,6 +318,8 @@ public class ConfirmEmployee extends javax.swing.JFrame {
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         // TODO add your handling code here:
         dispose();
+        //EditEmployee emp = new EditEmployee(); //instantiate 
+        //emp.setVisible(true);
     }//GEN-LAST:event_confirmButtonActionPerformed
 
     private void addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressActionPerformed
